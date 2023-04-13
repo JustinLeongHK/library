@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --navigation: #b85042;
+  --background: #e7e8d1;
+  --card-color: #a7beae;
+}
+
+header {
+  height: 10vh;
+  background-color: var(--navigation);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body {
+  background-color: var(--background);
+}
+
+img {
+  width: 50px;
+  height: auto;
+}
+
+img[src="icons/add-svgrepo-com.svg"] {
+  cursor: pointer;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: 120px 50px;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.right {
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  margin-right: 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 20px;
+  justify-items: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-color);
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.content {
+  align-self: center;
+}
+
+.content > h5 {
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.action :nth-child(1) {
+  background-color: greenyellow;
+}
+
+.action :nth-child(2) {
+  background-color: red;
+  color: white;
+}
+
+/* Style the modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the modal content */
+.modal-content {
+  background-color: #fbeaeb;
+  color: #2f3c7e;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.form-grid-top {
+  display: grid;
+  grid-template-columns: 50px 70%;
+  gap: 5px;
+  margin: 10px;
+}
+
+.form-grid-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10%;
+}
+
+.modal-content > h2 {
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  justify-self: start;
+  align-items: end;
+}
+
+.form-grid-bottom > button {
+  background-color: #2f3c7e;
+  color: #fbeaeb;
+}
